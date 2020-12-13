@@ -16,7 +16,7 @@ export default {
   created: function() {
     this.username = this.$route.params.username
     let self = this
-    axios.get("https://cajero-api.herokuapp.com/user/balance/" + this.username).then((result) => {
+    axios.get("https://cajero-api4.herokuapp.com/user/balance/" + this.username).then((result) => {
       self.balance = result.data.balance
     }).catch((error) => {
       alert("ERROR Servidor")
